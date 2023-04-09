@@ -1,0 +1,270 @@
+/*
+    This SCSS file contains the styles for the Google Search, Image Search, and Advanced Search pages.
+*/
+body {
+  /*
+      The body element styles the entire page.
+      It sets the font family, display property, height, and margin to center and occupy the full viewport height.
+  */
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+header {
+  /*
+      The header element contains the navigation bar of the page.
+      It sets the position to absolute, and the top and right properties to 20px.
+  */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+main {
+  /*
+      The main element styles the main content of the page.
+      It sets the display property to flex, flex direction to column, align and justify content to center.
+      It also sets the height property to 0vh and padding top to 1vh.
+  */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1vh;
+  height: 0vh;
+  margin: 0;
+}
+
+.main-advanced {
+  /*
+      The .main-advanced class styles the main content of the Advanced Search page.
+      It sets the display property to flex, flex direction to column, align items to flex-start, and padding top and left properties.
+      It also sets the height property to 0vh, margin to 0, and width to 100%.
+  */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 1vh;
+  padding-left: 15vh;
+  height: 0vh;
+  margin: 0;
+  width: 100%;
+}
+
+nav a {
+  /*
+      The nav a element styles the links in the navigation bar.
+      It sets the margin-left, text-decoration, and color properties.
+      It also sets the text-decoration to underline on hover.
+  */
+  margin-left: 20px;
+  text-decoration: none;
+  color: #222;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  /*
+      The .logo class styles the Google logo.
+      It sets the margin-bottom property to 20px.
+  */
+  margin-bottom: 20px;
+}
+
+form {
+  /*
+      The form element styles the search form for Google Search and Image Search only.
+      It sets the display property to flex, flex direction to column, and align-items to center.
+  */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advanced-form {
+  /*
+      The .advanced-form class styles the advanced search form.
+      It sets the display property to flex, flex direction to column, and align items to flex-start.
+      It also sets the width, max-width, padding, and margin properties.
+  */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px 0;
+}
+.advanced-form .form-group {
+  /*
+      The .form-group class styles the form groups.
+      It sets the margin-bottom, display, flex-direction, and align-items properties.
+  */
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.advanced-form .form-group label {
+  /*
+      The label element styles the label text of the form groups.
+      It sets the display and margin-bottom properties.
+  */
+  display: block;
+  margin-bottom: 5px;
+}
+.advanced-form .form-group input[type=text] {
+  /*
+      The input[type="text"] styles the text input of the form groups.
+      It sets the width, height, padding, border, border-radius, box-sizing, font-size, and line-height properties.
+  */
+  width: 582px;
+  height: 30px;
+  padding: 6px 12px;
+  border: 1.4px solid #dcdcdc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.search-container {
+  /*
+      The .search-container class styles the search container of the search form.
+      It sets the position to relative, display to flex, align and justify content to center, and background-color, border, box-shadow, border-radius, padding, width, and height properties.
+      It also sets the border-color and box-shadow properties on hover and focus within.
+  */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid #dfe1e5;
+  box-shadow: none;
+  border-radius: 24px;
+  padding: 0 16px;
+  width: 582px;
+  height: 44px;
+  margin-bottom: 16px;
+}
+.search-container:hover, .search-container:focus-within {
+  border-color: rgba(223, 225, 229, 0);
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28), 0 0 0 1px rgba(32, 33, 36, 0.08);
+}
+.search-container input[type=text] {
+  /*
+      The input[type="text"] styles the text input inside the search container.
+      It sets the border, background, margin-left, outline, and width properties.
+  */
+  border: none;
+  background: transparent;
+  margin-left: 14px;
+  outline: none;
+  width: 100%;
+}
+
+#search {
+  /*
+      The #search styles the text input of the Google Search form.
+      It sets the border, outline, and width properties.
+  */
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  width: 20px;
+  height: 20px;
+  background-image: url("https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png");
+  background-size: 20px;
+  background-repeat: no-repeat;
+}
+
+.buttons {
+  /*
+      The .buttons class styles the buttons of the search forms.
+      It sets the input[type="submit"] background-color, border, color, font-size, padding, margin, and border-radius properties.
+      It also sets the border and background-color properties on hover and cursor to pointer.
+  */
+}
+.buttons input[type=submit] {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  color: #3c4043;
+  font-size: 14px;
+  padding: 8px 16px;
+  margin: 6px 4px;
+  border-radius: 4px;
+}
+.buttons input[type=submit]:hover {
+  border: 1px solid #dadce0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+
+.logo {
+  /*
+      The .logo class styles the Google logo in the search pages.
+      It sets the display property to flex, justify-content to center, and margin-bottom property.
+  */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.advanced-search-btn {
+  /*
+      The .advanced-search-btn class styles the "Advanced Search" button in the Advanced Search page.
+      It sets the align-self property to flex-end.
+  */
+  align-self: flex-end;
+}
+.advanced-search-btn input[type=submit] {
+  /*
+      The input[type="submit"] styles the "Advanced Search" button inside the .advanced-search-btn class.
+      It sets the background-color, border, color, font-size, padding, margin, and border-radius properties.
+      It also sets the border and background-color properties on hover and cursor to pointer.
+  */
+  background-color: #4285F4;
+  border: 1px solid #f8f9fa;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 16px;
+  margin: 6px 4px;
+  border-radius: 4px;
+}
+.advanced-search-btn input[type=submit]:hover {
+  border: 1px solid #1a73e8;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  background-color: #1a73e8;
+  cursor: pointer;
+}
+
+.googleimagestext {
+  color: #4285F4;
+  font-weight: 500;
+  margin-left: 211px;
+  margin-top: -35px;
+  padding-bottom: 20px;
+}
+
+.googleadvancedtext {
+  color: #DB4437;
+  font-weight: 500;
+  margin-left: 215px;
+  margin-top: -35px;
+  padding-bottom: 20px;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,57 @@
+<!-- 
+    The following HTML file represents the Google Search page.
+    It contains a navigation bar, a search bar, and a Google logo.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 
+        The meta tags set the character encoding and viewport properties of the page.
+        The title tag sets the title of the page.
+        The link tag links the CSS file to the HTML file.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- 
+        The header tag contains the navigation bar of the page.
+        The nav tag contains the links to the "Image Search" and "Advanced Search" pages.
+    -->
+    <header>
+        <nav>
+            <a href="images.html">Image Search</a>
+            <a href="advanced.html">Advanced Search</a>
+        </nav>
+    </header>
+
+    <!-- 
+        The main tag contains the Google logo and the search bar.
+        The form tag represents the search bar that submits the search query to the Google search engine.
+        The action attribute specifies the URL of the Google search engine.
+        The input tag with type "submit" represents the "Google Search" and "I'm Feeling Lucky" buttons.
+    -->
+    <main>
+        <div class="logo">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+                alt="Google logo">
+        </div>
+        <form action="https://www.google.com/search" method="get">
+            <div class="search-container">
+                <input type="text" name="q" id="search" autocomplete="off">
+            </div>
+            <div class="buttons">
+                <input type="submit" value="Google Search">
+                <input type="submit" name="btnI" value="I'm Feeling Lucky">
+            </div>
+        </form>
+    </main>
+
+</body>
+
+</html>

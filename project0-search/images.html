@@ -1,0 +1,62 @@
+<!--
+    This HTML file represents the Google Image Search page.
+    It contains a navigation bar, a Google logo, and a search bar.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 
+        The meta tags set the character encoding and viewport properties of the page.
+        The title tag sets the title of the page.
+        The link tag links the CSS file to the HTML file.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Image Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- 
+        The header tag contains the navigation bar of the page.
+        The nav tag contains the links to the "Google Search" and "Advanced Search" pages.
+    -->
+    <header>
+        <nav>
+            <a href="index.html">Google Search</a>
+            <a href="advanced.html">Advanced Search</a>
+        </nav>
+    </header>
+
+    <!-- 
+        The main tag contains the Google logo, the "Images" text, and the search bar.
+        The div tag with class "logo" contains the Google logo image.
+        The div tag with class "googleimagestext" contains the "Images" text.
+        The form tag represents the search bar that submits the search query to the Google Image Search engine.
+        The input tag with type "hidden" is used to specify the search type for the Google Image Search engine.
+        The input tag with type "text" represents the search input field.
+        The input tag with type "submit" represents the "Image Search" button.
+        The action attribute specifies the URL of the Google Image Search engine.
+    -->
+    <main>
+        <div class="logo">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+                alt="Google logo">
+        </div>
+        <div class="googleimagestext">Images</div>
+        <form action="https://www.google.com/search" method="get">
+            <input type="hidden" name="tbm" value="isch">
+            <div class="search-container">
+                <input type="text" name="q" id="q" autocomplete="off">
+            </div>
+            <div class="buttons">
+                <input type="submit" value="Image Search">
+            </div>
+        </form>
+    </main>
+
+</body>
+
+</html>
