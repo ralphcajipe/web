@@ -1,0 +1,30 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+Encyclopedia
+{% endblock %}
+
+{% block body %}
+<!-- Page heading -->
+<h1>New Page</h1>
+
+<!-- Form for creating new encyclopedia page -->
+<div class="form-floating">
+    <form action="{% url 'create' %}" method="POST">
+        {% csrf_token %}
+
+        <!-- Input for title -->
+        <input class="form-control" type="text" name="title" placeholder="Title" style="width: 60vw">
+        <br>
+
+        <!-- Input for content -->
+        <textarea class="form-control" name="content" placeholder="Content"
+            style="width: 60vw; height: 300px;"></textarea>
+        <br>
+
+        <!-- Button for submitting form -->
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+</div>
+
+{% endblock %}

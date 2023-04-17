@@ -1,0 +1,30 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+Encyclopedia
+{% endblock %}
+
+{% block body %}
+<h1>Edit Page</h1>
+
+<!-- Form for editing an existing encyclopedia entry -->
+<div class="form-floating">
+    <form action="{% url 'save' %}" method="POST">
+        {% csrf_token %}
+
+        <!-- Input field for the title of the encyclopedia entry -->
+        <input class="form-control" type="text" name="title" value="{{ title }}" placeholder="Title"
+            style="width: 60vw">
+        <br>
+        
+        <!-- Textarea field for the content of the encyclopedia entry -->
+        <textarea class="form-control" name="content" placeholder="Content"
+            style="width: 60vw; height: 300px;">{{ content }}</textarea>
+        <br>
+        
+        <!-- Button to submit the edited encyclopedia entry -->
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+</div>
+
+{% endblock %}

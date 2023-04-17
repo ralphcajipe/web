@@ -1,0 +1,18 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+Encyclopedia
+{% endblock %}
+
+{% block body %}
+<!-- Display a list of recommended entries based on user's search -->
+<h1>All Results</h1>
+
+<ul>
+    {% for entry in recomendations %}
+    <!-- Create a link for each recommended entry -->
+    <li><a href="{% url 'entry' title=entry %}">{{ entry }}</a></li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
